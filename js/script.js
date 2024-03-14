@@ -8,6 +8,10 @@
 // chiediamo all'utente se sceglie "pari" o "dispari"
 let userChoice = prompt('Scegli tra pari e dispari');
 
+while (userChoice !== 'pari' && userChoice !== 'dispari') {
+    userChoice = prompt('Scegli tra pari e dispari');
+}
+
 // chiediamo all'utente un numero
 const randomUserNumber = parseInt(prompt('Dimmi un numero da 1 a 5'));
 console.log('Numero user', + randomUserNumber);
