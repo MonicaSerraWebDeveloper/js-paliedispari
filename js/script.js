@@ -5,17 +5,29 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto
 
+// chiediamo all'utente se sceglie "pari" o "dispari"
+const userChoice = prompt('Scegli tra pari e dispari');
+
 // chiediamo all'utente un numero
 const randomUserNumber = parseInt(prompt('Dimmi un numero da 1 a 5'));
 console.log('Numero user', + randomUserNumber);
 
-// mettiamo il numero del casuale da 1 a 5 creato dal computer in una variabile
+// mettiamo un numero casuale da 1 a 5 creato dal computer in una variabile
 const randomRobotNumber = getRndInteger(1, 5);
 console.log('Numero computer', + randomRobotNumber);
 
 // eseguiamo il risultato della somma tra il numero di userNum e il numero robotNum
 const resultOfTwoNumbers = sumOfNumber (randomUserNumber, randomRobotNumber);
-console.log('Risultato', + resultOfTwoNumbers);
+console.log(resultOfTwoNumbers);
+
+// stabiliamo se il risultato della somma è pari o dispari e assegnamoli una stringa
+let evenOrOddNumber;
+if (resultOfTwoNumbers % 2 === 0) {
+    evenOrOddNumber = 'pari'
+} else {
+    evenOrOddNumber = 'dispari'
+}
+
 
 // FUNCTIONS
 // Creiamo una funzione sumOfNumber
@@ -31,13 +43,3 @@ function sumOfNumber (userNum, robotNum) {
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
-
-// L'utente sceglie "pari" o "dispari"
-// Chiediamo all'utente un numero da 1 a 5 
-// Generiamo un numero random da 1 a 5 per il computer
-// Facciamo la somma del numero dell'utente con il numero del computer
-// Se il risultato della somma è pari restituiamo "pari"
-// Se il risultato della somma è dispari restituiamo "dispari"
-// Se il risultato tra pari e dispari corrisponde alla scelta dell'utente ha vinto l'utente
-// Se il risultato è diverso rispetto alla scelta dell'utente allora l'utente ha perso
-
