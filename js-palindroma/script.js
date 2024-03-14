@@ -14,6 +14,12 @@ function isTheWordAPalindrom (word) {
         console.log(letterWord);
         reverseWord += letterWord;
     }
+    let palindromOrNot;
+    if (reverseWord === word) {
+        palindromOrNot = "È palindromo"
+    } else {
+        palindromOrNot = "Non è palindromo"
+    }
     
 }
 
