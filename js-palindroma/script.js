@@ -12,6 +12,7 @@ function isTheWordAPalindrom (word) {
     for (let i = word.length - 1; i >= 0; i-- ) {
         let letterWord = word[i];
         console.log(letterWord);
+        reverseWord += letterWord;
     }
     
 }
