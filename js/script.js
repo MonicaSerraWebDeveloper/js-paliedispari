@@ -6,7 +6,7 @@
 // Dichiariamo chi ha vinto
 
 // chiediamo all'utente se sceglie "pari" o "dispari"
-const userChoice = prompt('Scegli tra pari e dispari');
+let userChoice = prompt('Scegli tra pari e dispari');
 
 // chiediamo all'utente un numero
 const randomUserNumber = parseInt(prompt('Dimmi un numero da 1 a 5'));
@@ -21,13 +21,22 @@ const resultOfTwoNumbers = sumOfNumber (randomUserNumber, randomRobotNumber);
 console.log(resultOfTwoNumbers);
 
 // stabiliamo se il risultato della somma è pari o dispari e assegnamoli una stringa
-let evenOrOddNumber;
+let evenOrOddNumber = '';
 if (resultOfTwoNumbers % 2 === 0) {
     evenOrOddNumber = 'pari'
 } else {
     evenOrOddNumber = 'dispari'
 }
 
+let userMessage;
+// con la condizione if stabiliamo se l'utente ha vinto o perso
+if (evenOrOddNumber === userChoice) {
+    userMessage = `Il numero è: ${resultOfTwoNumbers} ed è: ${evenOrOddNumber} quindi hai vinto`
+} else {
+    userMessage = `Il numero è: ${resultOfTwoNumbers} ed è: ${evenOrOddNumber} quindi hai perso`
+}
+
+console.log(userMessage);
 
 // FUNCTIONS
 // Creiamo una funzione sumOfNumber
