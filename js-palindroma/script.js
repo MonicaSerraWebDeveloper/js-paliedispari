@@ -3,8 +3,11 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 // Su internet ci sono soluzioni con join e reverse, non potete usarle!
 
+const userWord = prompt('Scrivi una parola')
 
 const theResultOfPalindrome = isTheWordAPalindrom (userWord)
+alert (theResultOfPalindrome)
+console.log(theResultOfPalindrome);
 
 // FUNCTIONS
 function isTheWordAPalindrom (word) {
