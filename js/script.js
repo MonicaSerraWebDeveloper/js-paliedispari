@@ -24,23 +24,7 @@ console.log('Numero computer', + randomRobotNumber);
 const resultOfTwoNumbers = sumOfNumber (randomUserNumber, randomRobotNumber);
 console.log(resultOfTwoNumbers);
 
-// stabiliamo se il risultato della somma è pari o dispari e assegnamoli una stringa
-let evenOrOddNumber = '';
-if (resultOfTwoNumbers % 2 === 0) {
-    evenOrOddNumber = 'pari'
-} else {
-    evenOrOddNumber = 'dispari'
-}
-
-// con la condizione if stabiliamo se l'utente ha vinto o perso
-let userMessage;
-if (evenOrOddNumber === userChoice) {
-    userMessage = `Il numero è: ${resultOfTwoNumbers} ed è: ${evenOrOddNumber} quindi hai vinto`
-} else {
-    userMessage = `Il numero è: ${resultOfTwoNumbers} ed è: ${evenOrOddNumber} quindi hai perso`
-}
-
-console.log(userMessage);
+const resultEvenOrOdd = evenOrOdd(resultOfTwoNumbers)
 
 // FUNCTIONS
 // Creiamo una funzione sumOfNumber
@@ -51,6 +35,21 @@ function sumOfNumber (userNum, robotNum) {
     const result = userNum + robotNum;
     return result
 }
+
+// Funzione per stabilire se un numero è pari o dispari 
+// e restituire una stringa "pari" se il numero è pari
+// una stringa "dispari" se il numero è dispari
+
+function evenOrOdd(number) {
+    let evenOrOddNumber;
+    if (number % 2 === 0) {
+        evenOrOddNumber = 'pari'
+    } else {
+        evenOrOddNumber = 'dispari'
+    }
+    return evenOrOddNumber
+}
+
 
 // funzione per generare un numero random preso da w3school
 function getRndInteger(min, max) {
