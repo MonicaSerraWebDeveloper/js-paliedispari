@@ -7,6 +7,7 @@
 
 // chiediamo all'utente se sceglie "pari" o "dispari"
 let userChoice = prompt('Scegli tra pari e dispari');
+console.log(userChoice);
 
 while (userChoice !== 'pari' && userChoice !== 'dispari') {
     userChoice = prompt('Scegli tra pari e dispari');
@@ -25,6 +26,10 @@ const resultOfTwoNumbers = sumOfNumber (randomUserNumber, randomRobotNumber);
 console.log(resultOfTwoNumbers);
 
 const resultEvenOrOdd = evenOrOdd(resultOfTwoNumbers)
+console.log(resultEvenOrOdd);
+
+const winOrLoseMessage = userWinOrLose (userChoice, resultEvenOrOdd)
+alert(winOrLoseMessage);
 
 // FUNCTIONS
 // Creiamo una funzione sumOfNumber
@@ -50,6 +55,21 @@ function evenOrOdd(number) {
     return evenOrOddNumber
 }
 
+// Funzione che decreta se il lo user ha indovinato la sua previsione scegliendo tra pari e dispari
+// inputUser -> è una stringa presa da un prompt scritto da uno user
+// resultSum -> è una stringa che deriva dalla funzione evenOrOdd 
+// in una condizione viene imposto che se la stringa inputUser è uguale a resultSum
+// allora la variabile stabilita fuori di userMessage darà un messaggio di vittoria all'utente
+// in tutti gli altri casi nella variabile userMessage darà il messaggio di aver sbagliato la previsione
+function userWinOrLose (inputUser, resultSum) {
+    let userMessage;
+    if (inputUser === resultSum) {
+        userMessage = `È uscito il numero: ${resultOfTwoNumbers} ed è: ${resultEvenOrOdd} quindi hai vinto`
+    } else {
+        userMessage = `È uscito il numero: ${resultOfTwoNumbers} ed è: ${resultEvenOrOdd} quindi hai perso`
+    }
+    return userMessage
+}
 
 // funzione per generare un numero random preso da w3school
 function getRndInteger(min, max) {
