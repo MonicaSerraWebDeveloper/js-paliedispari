@@ -5,6 +5,20 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto
 
+
+// FUNCTIONS
+
+
+// Creiamo una funzione sum
+// Sommiamo il numero che ci viene dato dall'utente in userNum
+// Al numero generato dal computer in robotNum
+
+
+// funzione per generare un numero random preso da w3school
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
 // L'utente sceglie "pari" o "dispari"
 // Chiediamo all'utente un numero da 1 a 5 
 // Generiamo un numero random da 1 a 5 per il computer
