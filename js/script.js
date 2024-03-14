@@ -5,20 +5,27 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto
 
+// chiediamo all'utente un numero
+const randomUserNumber = parseInt(prompt('Dimmi un numero da 1 a 5'));
+console.log('Numero user', + randomUserNumber);
+
+// mettiamo il numero del casuale da 1 a 5 creato dal computer in una variabile
+const randomRobotNumber = getRndInteger(1, 5);
+console.log('Numero computer', + randomRobotNumber);
+
+// eseguiamo il risultato della somma tra il numero di userNum e il numero robotNum
+const resultOfTwoNumbers = sumOfNumber (randomUserNumber, randomRobotNumber);
+console.log('Risultato', + resultOfTwoNumbers);
 
 // FUNCTIONS
-
-const resultOfTwoNumbers = sumOfNumber (4, 5);
-console.log(resultOfTwoNumbers);
-
+// Creiamo una funzione sumOfNumber
+// userNum -> numero intero casuale tra 1 e 5 scelto dall'utente con un prompt
+// robotNum -> numero intero casuale tra 1 e 5 scelto dal computer tramite la funzione di w3school
+// return il risultato numero intero della somma tra userNum e robotNum
 function sumOfNumber (userNum, robotNum) {
-    let sum = userNum + robotNum;
-    return sum
+    const result = userNum + robotNum;
+    return result
 }
-// Creiamo una funzione sum
-// Sommiamo il numero che ci viene dato dall'utente in userNum
-// Al numero generato dal computer in robotNum
-
 
 // funzione per generare un numero random preso da w3school
 function getRndInteger(min, max) {
