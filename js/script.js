@@ -32,8 +32,8 @@ if (resultOfTwoNumbers % 2 === 0) {
     evenOrOddNumber = 'dispari'
 }
 
-let userMessage;
 // con la condizione if stabiliamo se l'utente ha vinto o perso
+let userMessage;
 if (evenOrOddNumber === userChoice) {
     userMessage = `Il numero è: ${resultOfTwoNumbers} ed è: ${evenOrOddNumber} quindi hai vinto`
 } else {
