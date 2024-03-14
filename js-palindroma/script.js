@@ -9,6 +9,15 @@ const theResultOfPalindrome = isTheWordAPalindrom (userWord)
 alert (theResultOfPalindrome)
 console.log(theResultOfPalindrome);
 
+// Questa funzione ha il compito di dire se una parola è palindroma o no
+// word -> è una stringa 
+// la stringa word viene messa in un ciclo for e la scorriamo da destra verso sinistra
+// le singole lettere vengono concatenate in una variabile chiamata reverseWord
+// abbiamo la parola al contrario e la mettiamo in una condizione
+// in questa condizione stabiliamo che se la parola word e la parola reverseWord sono uguali
+// allora la condizione restituirà la frase "È palindroma"
+// Se non è uguale la condizione restituisce "Non è palindroma"
+
 // FUNCTIONS
 function isTheWordAPalindrom (word) {
     let reverseWord = '';
