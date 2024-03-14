@@ -20,7 +20,7 @@ function isTheWordAPalindrom (word) {
     } else {
         palindromOrNot = "Non è palindromo"
     }
-    
+    return palindromOrNot
 }
 
 // Chiediamo all'utente di inserire una parola in un prompt
