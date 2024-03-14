@@ -8,7 +8,13 @@
 
 // FUNCTIONS
 
+const resultOfTwoNumbers = sumOfNumber (4, 5);
+console.log(resultOfTwoNumbers);
 
+function sumOfNumber (userNum, robotNum) {
+    let sum = userNum + robotNum;
+    return sum
+}
 // Creiamo una funzione sum
 // Sommiamo il numero che ci viene dato dall'utente in userNum
 // Al numero generato dal computer in robotNum
